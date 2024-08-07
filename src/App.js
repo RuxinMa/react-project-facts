@@ -14,7 +14,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [currentCategory, setCurrentCategory] = useState("all");
 
-  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   /* Get data from supabase */
   useEffect(function() {
