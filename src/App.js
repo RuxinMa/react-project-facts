@@ -6,11 +6,15 @@ import NewFactForm from './components/NewFactForm';
 import CategoryFilter from './components/CategoryFilter';
 import FactList from './components/FactList';
 
+import { useAuth0 } from '@auth0/auth0-react';
+
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [facts, setFacts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentCategory, setCurrentCategory] = useState("all");
+
+  const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
 
   /* Get data from supabase */
   useEffect(function() {
@@ -41,10 +45,16 @@ function App() {
   return (
     <>
       {/* Header */}
-      <Header showForm={showForm} setShowForm={setShowForm}/>
+      <Header 
+        showForm={showForm} 
+        setShowForm={setShowForm}
+        isAuthenticated={isAuthenticated}
+        loginWithRedirect={loginWithRedirect}
+        logout={logout}
+      />
       
       {/* Fact Form */}
-      {showForm ? 
+      {showForm && isAuthenticated ? 
         <NewFactForm setFacts={setFacts} setShowForm={setShowForm}/> : 
         null}
 

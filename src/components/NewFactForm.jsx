@@ -12,7 +12,7 @@ function isValidHttpUrl(string) {
   return url.protocol === "http:" || url.protocol === "https:";
 }
 
-const NewFactForm = ({ facts, setFacts, setShowForm}) => {
+const NewFactForm = ({ setFacts, setShowForm}) => {
   const [text, setText] = useState('');
   const [source, setSource] = useState('');
   const [category, setCategory] = useState('');
@@ -50,17 +50,17 @@ const NewFactForm = ({ facts, setFacts, setShowForm}) => {
         if (!error) {
           setFacts((facts) => [newFact[0], ...facts]);
           setIsUploading(false);
+
+          // 5. Reset input field
+          setText("");
+          setSource("");
+          setCategory("");
+
+          // 6. Close the form
+          setShowForm(false);
         } else {
           console.error("Error inserting fact:", error);
         }
-        
-        // 5. Reset input field
-        setText("");
-        setSource("");
-        setCategory("");
-
-        // 6. Close the form
-        setShowForm(false);
       }
     }
 
