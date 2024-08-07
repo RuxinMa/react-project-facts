@@ -1,11 +1,16 @@
 # Full-Stack Web Application
 ### Techs: JavaScript, CSS, HTML, React, Supabase
+### Features:
+- Discover facts from different categories
+- Log in and post new facts
+- Vote interesting, mindblowing, or False for fact
+
 
 ### Project Preview
 ![Component Design](Component-Design.png)
 
 
-This project are deployed on netlify:
+The project is deployed on netlify:
 
 Click the **link** to explore: https://rm-react-project-facts.netlify.app/
 
