@@ -1,8 +1,8 @@
-## Full-Stack Web Application
+# Full-Stack Web Application
 ### Techs: JavaScript, CSS, HTML, React, Supabase
 
 ### Project Preview
-![Component Design](Component Design.png)
+![Component Design](Component-Design.png)
 
 
 This project are deployed on netlify:
