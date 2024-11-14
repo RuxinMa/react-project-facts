@@ -7,13 +7,9 @@
 
 
 ### Project Preview
+The project is deployed on netlify: [Click here to explore](https://rm-react-project-facts.netlify.app/)
+
 ![Component Design](Component-Design.png)
-
-
-The project is deployed on netlify:
-
-Click the **link** to explore: https://rm-react-project-facts.netlify.app/
-
 
 # Getting Started with Create React App
 
